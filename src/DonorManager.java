@@ -19,7 +19,13 @@ public class DonorManager {
             System.out.println("Name:" + d.getName());
             System.out.println("Age:" + d.getAge());
             System.out.println("Blood Group:" + d.getBloodGroup());
-            System.out.println("Availability:" + d.isAvailable());
+            if(d.isAvailable())
+            {
+                System.out.println("Avalability: Yes");
+            }
+            else{
+                System.out.println("Availability: No");
+            }
             System.out.println("-----------------------------------");
         }
     }
@@ -31,7 +37,13 @@ public class DonorManager {
                 System.out.println("Name:" + d.getName());
                 System.out.println("Age:" + d.getAge());
                 System.out.println("Blood Group:" + d.getBloodGroup());
-                System.out.println("Availability:" + d.isAvailable());
+                if(d.isAvailable())
+            {
+                System.out.println("Avalability: Yes");
+            }
+            else{
+                System.out.println("Availability: No");
+            }
                 System.out.println("-----------------------------------");
             }
         }
