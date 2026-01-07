@@ -14,7 +14,8 @@ public class Main{
         int choice;
         while(true)
         {
-            System.out.println("Donor Management System:\n1.Add Donor\n2.Show All Donors\n3.Search By Blood Group\n4.Exit\nEnter Your choice:");
+            System.out.println("__________________________");
+            System.out.println("Donor Management System:\n1.Add Donor\n2.Show All Donors\n3.Search By Blood Group\n4.Remove Donor\n5.Exit\nEnter Your choice:");
             choice=sc.nextInt();
             sc.nextLine();
             switch(choice)
@@ -64,6 +65,18 @@ public class Main{
                     manager.searchByBloodGroup(bg);
                     break;
                 case 4:
+                    System.out.println("Enter the name that has to be removed:");
+                    String removeName=sc.nextLine();
+                    boolean removed=manager.removeDonor(removeName);
+                    if(removed)
+                    {
+                        System.out.println("Donor Removed!!");
+                    }
+                    else{
+                        System.out.println("Not found!!");
+                    }
+                    break;
+                case 5:
                     return;
                 default:
                     System.out.println("Invalid choice!!");

@@ -54,5 +54,19 @@ public class DonorManager {
             System.out.println("The Donor with blood group "+bloodgroup+" not found.");
         }
     }
+
+    public boolean removeDonor(String name)
+    {
+        for(int i=0;i<donors.size();i++)
+        {
+            if(donors.get(i).getName().equalsIgnoreCase(name))
+            {
+                donors.remove(i);
+                return true;
+            }
+        }
+        return false;
+
+    }
 }
 
