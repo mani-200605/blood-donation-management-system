@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         //The below comments are to check the basic objects declaration:
@@ -14,6 +15,11 @@ public class Main{
         manager.addDonor(d1);
         manager.addDonor(d2);
 
-        manager.showAllDonors();
-    }
+        // manager.showAllDonors();
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Blood Group to serach:");
+        String bg=sc.nextLine();
+        manager.searchByBloodGroup(bg);
+     }
 }

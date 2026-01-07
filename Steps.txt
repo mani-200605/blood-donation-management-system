@@ -1,0 +1,6 @@
+1.Create the file structures and create their respective classes
+2.Basic variables like name,age,bloodgroup,availabilty are declared,and respective getters are defined.
+3.Then create a new file DonorManager to add donors using ArrayList.
+4.Using arraylist properties we can add new donors to manager.
+5.create a method named showAllDonors to see all data that is stored
+6.Next we add a method to search donors by blood group using if statement
