@@ -13,5 +13,7 @@ public class Main{
         Donor d2=new Donor("Kavi","A+",19,false);
         manager.addDonor(d1);
         manager.addDonor(d2);
+
+        manager.showAllDonors();
     }
 }

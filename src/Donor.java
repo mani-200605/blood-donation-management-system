@@ -10,15 +10,15 @@ public class Donor {
         this.age=age;
         this.available=available;
     }
-    public String getname()
+    public String getName()
     {
         return name;
     }
-    public String getbg()
+    public String getBloodGroup()
     {
         return bloodgroup;
     }
-    public int getage()
+    public int getAge()
     {
         return age;
     }
