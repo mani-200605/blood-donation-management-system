@@ -31,9 +31,11 @@ public class DonorManager {
     }
 
     public void searchByBloodGroup(String bloodgroup) {
+        int found=0;
         for (int i = 0; i < donors.size(); i++) {
             Donor d = donors.get(i);
             if (d.getBloodGroup().equalsIgnoreCase(bloodgroup)) {
+                found=1;
                 System.out.println("Name:" + d.getName());
                 System.out.println("Age:" + d.getAge());
                 System.out.println("Blood Group:" + d.getBloodGroup());
@@ -46,6 +48,10 @@ public class DonorManager {
             }
                 System.out.println("-----------------------------------");
             }
+        }
+        if(found!=1)
+        {
+            System.out.println("The Donor with blood group "+bloodgroup+" not found.");
         }
     }
 }
