@@ -4,3 +4,12 @@
 4.Using arraylist properties we can add new donors to manager.
 5.create a method named showAllDonors to see all data that is stored
 6.Next we add a method to search donors by blood group using if statement
+7.Now able to take user Input for donors data,store it in newDonor.
+8.Add under 18 age condition for donor.
+9.Not found case in search
+10.Avoiding invalid blood groups to be entered.
+Blood groups:
+    A+  A-
+    B+  B-
+    AB+ AB-
+    O+  O-

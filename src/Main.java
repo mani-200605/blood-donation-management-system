@@ -32,6 +32,11 @@ public class Main{
                     }
                     System.out.println("Enter Blood Group:");
                     String bloodgroup=sc.nextLine();
+                    if(!(bloodgroup.equalsIgnoreCase("A+")||bloodgroup.equalsIgnoreCase("A-")||bloodgroup.equalsIgnoreCase("O+")||bloodgroup.equalsIgnoreCase("O-")||bloodgroup.equalsIgnoreCase("AB+")||bloodgroup.equalsIgnoreCase("AB-")))
+                    {
+                        System.out.println("Invalid BloodGroup Entered!!");
+                        break;
+                    }
                     System.out.println("Available?:");
                     String availability=sc.nextLine();
                     boolean available;
