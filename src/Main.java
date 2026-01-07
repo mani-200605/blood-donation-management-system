@@ -25,11 +25,24 @@ public class Main{
                     System.out.println("Enter Age:");
                     int age=sc.nextInt();
                     sc.nextLine();
+                    if(age<18)
+                    {
+                        System.out.println("Under Age!!");
+                        break;
+                    }
                     System.out.println("Enter Blood Group:");
                     String bloodgroup=sc.nextLine();
                     System.out.println("Available?:");
-                    boolean available=sc.nextBoolean();
-                    sc.nextLine();
+                    String availability=sc.nextLine();
+                    boolean available;
+                    if(availability.equalsIgnoreCase("yes"))
+                    {
+                        available=true;
+                    }
+                    else{
+                        available=false;
+                    }
+
                     Donor newDonor=new Donor(name,bloodgroup,age,available);
                     manager.addDonor(newDonor);
                     System.out.println("Donor added successfully!");
