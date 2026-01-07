@@ -2,11 +2,13 @@ public class Donor {
     private String name;
     private String bloodgroup;
     private int age;
-    public Donor(String name,String bloodgroup,int age)
+    private boolean available;
+    public Donor(String name,String bloodgroup,int age,boolean available)
     {
         this.name=name;
         this.bloodgroup=bloodgroup;
         this.age=age;
+        this.available=available;
     }
     public String getname()
     {
@@ -19,5 +21,9 @@ public class Donor {
     public int getage()
     {
         return age;
+    }
+    public boolean isAvailable()
+    {
+        return available;
     }
 }
