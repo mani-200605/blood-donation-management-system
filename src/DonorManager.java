@@ -1,5 +1,7 @@
 
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
+
 
 public class DonorManager {
 
@@ -67,6 +69,23 @@ public class DonorManager {
         }
         return false;
 
+    }
+
+    public void saveToFile()
+    {
+        try{
+            FileWriter writer=new FileWriter("donor.txt");
+        for(Donor d : donors)
+        {
+            writer.write(d.getName()+","+d.getBloodGroup()+","+d.getAge()+","+d.isAvailable()+"\n");
+            
+        }
+        writer.close();
+        }
+        catch(IOException e)
+        {
+            System.out.println("Error is saving Donors File!!");
+        }
     }
 }
 

@@ -77,6 +77,8 @@ public class Main{
                     }
                     break;
                 case 5:
+                    manager.saveToFile();
+                    System.out.println("Data Saved to file,Exiting Program...");
                     return;
                 default:
                     System.out.println("Invalid choice!!");
