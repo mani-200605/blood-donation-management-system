@@ -24,6 +24,11 @@ public class Main{
                 case 1:
                     System.out.println("Enter the name:");
                     String name=sc.nextLine();
+                    if(manager.donorExists(name))
+                    {
+                        System.out.println("Donor with same name exists..");
+                        break;
+                    }
                     System.out.println("Enter Age:");
                     int age=sc.nextInt();
                     sc.nextLine();

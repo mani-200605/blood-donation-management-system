@@ -111,5 +111,16 @@ public class DonorManager {
         }
 
     }
+
+    public boolean donorExists(String name)
+    {
+        for(Donor d:donors){
+            if(d.getName().equalsIgnoreCase(name))
+            {
+                return true;
+            }
+        }
+            return false;
+    }
 }
 
