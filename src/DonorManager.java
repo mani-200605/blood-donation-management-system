@@ -16,6 +16,10 @@ public class DonorManager {
     }
 
     public void showAllDonors() {
+        if(donors.isEmpty())
+                    {
+                        System.out.println("NO donors available.");
+                    }
         for (int i = 0; i < donors.size(); i++) {
             Donor d = donors.get(i); //.get is used to access arraylist index element
             System.out.println("Name:" + d.getName());

@@ -1,13 +1,6 @@
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
-        //The below comments are to check the basic objects declaration:
-        // Donor d1=new Donor("Mani","o+",19,true);
-        // System.out.println("Donor Name: " + d1.getname());
-        // System.out.println("Blood Group:"+d1.getbg());
-        // System.out.println("Age:"+d1.getage());
-        // System.out.println("Availability:"+d1.isAvailable());
-
         DonorManager manager=new DonorManager();
         manager.loadFromFile();
         
@@ -85,6 +78,7 @@ public class Main{
                 case 5:
                     manager.saveToFile();
                     System.out.println("Data Saved to file,Exiting Program...");
+                    sc.close();
                     return;
                 default:
                     System.out.println("Invalid choice!!");
