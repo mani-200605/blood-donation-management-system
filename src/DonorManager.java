@@ -87,5 +87,29 @@ public class DonorManager {
             System.out.println("Error is saving Donors File!!");
         }
     }
+
+    public void loadFromFile()
+    {
+        try {
+            BufferedReader reader=new BufferedReader(new FileReader("donor.txt"));
+            String line;
+
+            while((line=reader.readLine())!=null)
+            {
+                String[] parts=line.split(",");
+                String name=parts[0];
+                String bloodgroup=parts[1];
+                int age=Integer.parseInt(parts[2]);
+                boolean available=Boolean.parseBoolean(parts[3]);
+
+                Donor donor=new Donor(name,bloodgroup,age,available);
+                donors.add(donor);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("...");
+        }
+
+    }
 }
 

@@ -9,6 +9,7 @@ public class Main{
         // System.out.println("Availability:"+d1.isAvailable());
 
         DonorManager manager=new DonorManager();
+        manager.loadFromFile();
         
         Scanner sc=new Scanner(System.in);
         int choice;
